@@ -1,0 +1,9 @@
+services:
+  api:
+    build: .
+    image: zmedicine-system
+    container_name: zmedicine-api
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
