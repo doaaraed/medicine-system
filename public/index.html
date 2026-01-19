@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>ZMedicine System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body{font-family:Arial; max-width:900px; margin:40px auto; padding:0 16px}
+    h1{margin-bottom:8px}
+    .box{border:1px solid #ddd; border-radius:10px; padding:14px; margin:14px 0}
+    input,select{padding:10px; width:100%; margin:6px 0}
+    button{padding:10px 14px; cursor:pointer}
+    pre{background:#111; color:#0f0; padding:12px; border-radius:10px; overflow:auto}
+    a{display:inline-block; margin:4px 0}
+  </style>
+</head>
+<body>
+  <h1>Medicine System API ✅</h1>
+  <p>This is a simple UI to test the deployed API.</p>
+
+  <div class="box">
+    <h3>Quick Links</h3>
+    <a href="/medicines" target="_blank">GET /medicines</a><br/>
+    <a href="/pharmacies" target="_blank">GET /pharmacies</a><br/>
+    <a href="/alternatives" target="_blank">GET /alternatives</a><br/>
+  </div>
+
+  <div class="box">
+    <h3>Add Medicine (POST /medicines/add)</h3>
+    <input id="m_name" placeholder="name (e.g., Panadol)" />
+    <input id="m_company" placeholder="company (e.g., GSK)" />
+    <select id="m_available">
+      <option value="true">available = true</option>
+      <option value="false">available = false</option>
+    </select>
+    <button onclick="addMedicine()">Send</button>
+  </div>
+
+  <div class="box">
+    <h3>Signup (POST /auth/signup)</h3>
+    <input id="u_username" placeholder="username" />
+    <input id="u_email" placeholder="email" />
+    <input id="u_password" placeholder="password" />
+    <button onclick="signup()">Send</button>
+  </div>
+
+  <div class="box">
+    <h3>Response</h3>
+    <pre id="out">{}</pre>
+  </div>
+
+<script>
+  const out = (x) => document.getElementById('out').textContent =
+    typeof x === 'string' ? x : JSON.stringify(x, null, 2);
+
+  async function addMedicine(){
+    const body = {
+      name: document.getElementById('m_name').value,
+      company: document.getElementById('m_company').value,
+      available: document.getElementById('m_available').value === 'true'
+    };
+    try{
+      const r = await fetch('/medicines/add', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify(body)
+      });
+      out(await r.json());
+    }catch(e){ out(String(e)); }
+  }
+
+  async function signup(){
+    const body = {
+      username: document.getElementById('u_username').value,
+      email: document.getElementById('u_email').value,
+      password: document.getElementById('u_password').value
+    };
+    try{
+      const r = await fetch('/auth/signup', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify(body)
+      });
+      out(await r.json());
+    }catch(e){ out(String(e)); }
+  }
+</script>
+</body>
+</html>

@@ -5,6 +5,7 @@ const app = require('./app');
 const server = http.createServer(app);
 
 
-server.listen(process.env.PORT, () => {
-console.log('Server is listening now');
+const PORT = process.env.PORT || 5000;
+server.listen(PORT, '0.0.0.0', () => {
+  console.log('Server is listening now on port', PORT);
 });
