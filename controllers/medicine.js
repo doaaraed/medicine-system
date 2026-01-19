@@ -2,17 +2,26 @@ const { ObjectId } = require('bson');
 const createError = require('http-errors');
 const { dbConnection } = require('../configurations');
 
-
-const getMedicines = (req, res, next) => {
-dbConnection('main_medicines', async (collection) => {
-try {
-const medicines = await collection.find({}).toArray();
-res.json(medicines);
-} catch (err) {
-next(createError(500, err.message));
-}
-});
+const { readCsv } = require("../utils/csvDb");
+const getMedicines = async (req, res, next) => {
+  try {
+    const medicines = await readCsv("main_medicines.csv");
+    res.json(medicines);
+  } catch (err) {
+    next(createError(500, err.message));
+  }
 };
+
+// const getMedicines = (req, res, next) => {
+// dbConnection('main_medicines', async (collection) => {
+// try {
+// const medicines = await collection.find({}).toArray();
+// res.json(medicines);
+// } catch (err) {
+// next(createError(500, err.message));
+// }
+// });
+// };
 
 const addMedicine = (req, res, next) => {
   const { name, company, available } = req.body;

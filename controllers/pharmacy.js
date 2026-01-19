@@ -2,17 +2,30 @@ const createError = require('http-errors');
 const { dbConnection } = require('../configurations');
 const { ObjectId } = require('bson');
 
+const { readCsv } = require("../utils/csvDb");
 
-const getPharmacies = (req, res, next) => {
-dbConnection('pharmacies', async (collection) => {
-try {
-const pharmacies = await collection.find({ city: 'Gaza' }).toArray();
-res.json(pharmacies);
-} catch (err) {
-next(createError(500, err.message));
-}
-});
+const getPharmacies = async (req, res, next) => {
+  try {
+    const pharmacies = await readCsv("pharmacies.csv");
+    res.json(pharmacies);
+  } catch (err) {
+    next(createError(500, err.message));
+  }
 };
+
+module.exports = { getPharmacies };
+
+
+// const getPharmacies = (req, res, next) => {
+// dbConnection('pharmacies', async (collection) => {
+// try {
+// const pharmacies = await collection.find({ city: 'Gaza' }).toArray();
+// res.json(pharmacies);
+// } catch (err) {
+// next(createError(500, err.message));
+// }
+// });
+// };
 
 
 const addPharmacy = (req, res, next) => {
