@@ -51,6 +51,13 @@ The project includes Makefile to simplify Docker commands:
 - make build
 - make run
 - make stop
+---
+
+### How to stop container and clean up
+1-Show all running containers:
+docker ps
+2-Stop the running container
+docker stop <container_name_or_id>
 
 ---
 
