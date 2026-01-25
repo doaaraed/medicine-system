@@ -29,14 +29,6 @@ I also faced some difficulties with Docker builds and deployments, especially wi
 ## How These Challenges Were Solved
 
 To solve the database connection problem, I migrated the medicine, pharmacy, and alternative data into CSV files and stored them in the project under a data folder. The backend was modified to read data from these CSV files instead of relying on MongoDB. This allowed the application to work reliably inside the Docker container without external database access.
-
-To make the system usable for users, I added a simple frontend interface (HTML and JavaScript) that allows users to:
-
-Sign up
-
-Log in
-
-View medicines, pharmacies, and alternatives
 This made the project more user-friendly and suitable for a deployed environment.
 
 Docker Compose and a Makefile were also added to simplify building, running, and stopping the containers with simple commands. This reduced manual errors and made deployment easier.
