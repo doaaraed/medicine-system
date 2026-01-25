@@ -5,9 +5,11 @@
 //   alternative: require('./alternative')
 // };
 
-module.exports = {
-  medicine: require("./medicine"),
-  pharmacy: require("./pharmacy"),
-  alternative: require("./alternative"),
-  // auth: require("./auth"), 
-};
+const { Router } = require("express");
+const { signup, login } = require("../controllers/auth");
+
+const router = Router();
+router.post("/signup", signup);
+router.post("/login", login);
+
+module.exports = router;

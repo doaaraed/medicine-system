@@ -1,2 +1,26 @@
 id,main_medicine_id,alternative_medicine_name,pharmacy_ids
-1,2,Amoxicillin,"1|2"
+a1,m3,Naproxen 250mg,p1|p2
+a2,m5,Amoxicillin/Clavulanate (Generic),p2|p4|p11
+a3,m8,Cetirizine 10mg,p1|p3|p6
+a4,m11,Ibuprofen 400mg,p3|p5
+a5,m5,Amoxicillin 500mg,p1|p6|p7
+a6,m16,Cetirizine 10mg,p8|p9
+a7,m19,Simvastatin 20mg,p2|p10
+a8,m22,Insulin Regular,p4|p12
+a9,m28,Metoclopramide 10mg,p1|p3
+a10,m29,Famotidine 20mg,p5|p6
+a11,m31,Levofloxacin 500mg,p2|p8
+a12,m32,Tetracycline 250mg,p6|p7
+a13,m33,Doxycycline 100mg,p3|p10
+a14,m15,Salbutamol Nebules,p1|p9
+a15,m21,Insulin NPH,p4|p11|p12
+a16,m24,Clotrimazole Cream,p1|p2|p3
+a17,m25,Itraconazole 100mg,p8|p10
+a18,m27,Diosmectite Sachets,p5|p6|p14
+a19,m30,Omeprazole 20mg,p1|p2
+a20,m34,Bromhexine Syrup,p7|p8
+a21,m35,Levocetirizine 5mg,p9|p10|p15
+a22,m12,Clarithromycin 500mg,p2|p11
+a23,m4,Azithromycin 500mg,p1|p3|p12
+a24,m6,Pantoprazole 40mg,p5|p8
+a25,m7,Loratadine 10mg,p6|p14

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Sign Up - ZMedicine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body{font-family:Arial; max-width:520px; margin:50px auto; padding:0 16px}
+    .box{border:1px solid #ddd; border-radius:12px; padding:16px}
+    input{padding:10px; width:100%; margin:8px 0}
+    button{padding:10px 14px; cursor:pointer; width:100%}
+    pre{background:#111; color:#0f0; padding:12px; border-radius:10px; overflow:auto}
+    a{display:inline-block; margin-top:10px}
+  </style>
+</head>
+<body>
+  <h1>Sign Up</h1>
+
+  <div class="box">
+    <input id="username" placeholder="username" />
+    <input id="email" placeholder="email" />
+    <input id="password" placeholder="password" type="password" />
+    <button onclick="signup()">Create Account</button>
+    <a href="/login.html">Already have an account? Login</a>
+  </div>
+
+  <pre id="out">{}</pre>
+
+<script>
+  const out = (x) => document.getElementById('out').textContent =
+    typeof x === 'string' ? x : JSON.stringify(x, null, 2);
+
+  async function signup(){
+    const body = {
+      username: document.getElementById('username').value,
+      email: document.getElementById('email').value,
+      password: document.getElementById('password').value
+    };
+
+    try{
+      const r = await fetch('/auth/signup', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify(body)
+      });
+
+      const data = await r.json();
+      out(data);
+
+      if (data.status === true){
+        window.location.href = '/login.html';
+      }
+    }catch(e){ out(String(e)); }
+  }
+</script>
+</body>
+</html>

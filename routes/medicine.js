@@ -1,13 +1,10 @@
 const { Router } = require("express");
-const { medicine } = require("../controllers");
-const { getMedicines } = medicine;
+const { getMedicines } = require("../controllers/medicine");
 
 const router = Router();
 router.get("/", getMedicines);
 
 module.exports = router;
-
-
 // const { Router } = require('express')
 // const { medicine } = require('../controllers');
 // const { getMedicines, addMedicine, updateMedicine, deleteMedicine } = medicine;

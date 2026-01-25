@@ -1,3 +1,36 @@
 id,name,company,available
-1,Panadol,GSK,true
-2,Augmentin,GSK,false
+m1,Panadol,GSK,true
+m2,Paracetamol 500mg,Generic,true
+m3,Ibuprofen 400mg,Advil,false
+m4,Amoxicillin 500mg,Generic,true
+m5,Augmentin 625mg,GSK,false
+m6,Omeprazole 20mg,Generic,true
+m7,Cetirizine 10mg,Zyrtec,true
+m8,Loratadine 10mg,Claritine,false
+m9,Metformin 500mg,Generic,true
+m10,Aspirin 100mg,Bayer,true
+m11,Diclofenac 50mg,Voltaren,false
+m12,Azithromycin 500mg,Generic,true
+m13,Vitamin C 1000mg,Generic,true
+m14,Vitamin D3 5000IU,Generic,true
+m15,Salbutamol Inhaler,Ventolin,true
+m16,Montelukast 10mg,Singulair,false
+m17,Losartan 50mg,Generic,true
+m18,Amlodipine 5mg,Generic,true
+m19,Atorvastatin 20mg,Lipitor,false
+m20,Simvastatin 20mg,Generic,true
+m21,Insulin Regular,Generic,false
+m22,Insulin Glargine,Lantus,false
+m23,Hydrocortisone Cream 1%,Generic,true
+m24,Miconazole Cream,Daktarin,true
+m25,Fluconazole 150mg,Generic,true
+m26,Oral Rehydration Salts (ORS),Generic,true
+m27,Loperamide 2mg,Imodium,true
+m28,Ondansetron 4mg,Generic,false
+m29,Ranitidine 150mg,Generic,false
+m30,Famotidine 20mg,Generic,true
+m31,Ciprofloxacin 500mg,Generic,true
+m32,Doxycycline 100mg,Generic,true
+m33,Clindamycin 300mg,Generic,false
+m34,Acetylcysteine 600mg,Generic,true
+m35,Chlorpheniramine 4mg,Generic,true

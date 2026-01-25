@@ -1,3 +1,16 @@
 id,name,location,phone,city
-1,AlShifa Pharmacy,Gaza City,0599123456,Gaza
-2,AlRimal Pharmacy,Rimal,0599001122,Gaza
+p1,Al Shifa Pharmacy,Rimal - Al Wehda St,0599000001,Gaza
+p2,Al Amal Pharmacy,Al Naser St,0599000002,Gaza
+p3,Al Quds Pharmacy,Beach Camp,0599000003,Gaza
+p4,Al Noor Pharmacy,Khan Younis Center,0599000004,Khan Younis
+p5,Al Hayat Pharmacy,Rafah - Main Street,0599000005,Rafah
+p6,Al Salam Pharmacy,Jabalia Camp,0599000006,Jabalia
+p7,Al Rahma Pharmacy,Al Tuffah,0599000007,Gaza
+p8,Al Wafa Pharmacy,Tel Al Hawa,0599000008,Gaza
+p9,Al Iman Pharmacy,Sheikh Radwan,0599000009,Gaza
+p10,Al Baraka Pharmacy,Al Zeitoun,0599000010,Gaza
+p11,Al Aqsa Pharmacy,Bani Suheila,0599000011,Khan Younis
+p12,Al Najah Pharmacy,Al Qarara,0599000012,Khan Younis
+p13,Al Fajr Pharmacy,Shaboura,0599000013,Rafah
+p14,Al Sahaba Pharmacy,Beit Lahia,0599000014,Beit Lahia
+p15,Al Basma Pharmacy,Beit Hanoun,0599000015,Beit Hanoun

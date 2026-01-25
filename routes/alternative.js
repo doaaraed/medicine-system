@@ -1,13 +1,10 @@
 const { Router } = require("express");
-const { alternative } = require("../controllers");
-const { getAlternatives } = alternative;
+const { getAlternatives } = require("../controllers/alternative");
 
 const router = Router();
 router.get("/", getAlternatives);
 
 module.exports = router;
-
-
 // const { Router } = require('express');
 // const { alternative } = require('../controllers');
 // const { addAlternative, getAlternatives, updateAlternative, deleteAlternative } = alternative;
