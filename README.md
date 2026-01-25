@@ -74,6 +74,33 @@ Use Postman to test endpoints such as:
 
 ---
 
+## Production Deployment (VPS)
+
+This project is deployed to a production environment using **Back4App**, which provides a VPS-style Docker hosting service.
+
+Instead of manually installing Docker on a server, the GitHub repository was connected directly to Back4App.  
+Back4App automatically pulls the code, builds the Docker image using the `Dockerfile`, and runs the container.
+## Steps:
+
+Connect Back4App to GitHub.
+
+Select the repository: doaaraed/medicine-system
+
+Choose the branch (example: master).
+
+Set the application port to 5000.
+
+Create deployment → Back4App builds the Docker image automatically and generates a public URL.
+
+---
+
+
+### Production URL
+
+The live deployed version of the project is available at:
+
+https://medicine21-l64ymwst.b4a.run/
+
 ## Project Structure
 zmedicine-system/
 │
