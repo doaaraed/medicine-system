@@ -93,6 +93,15 @@ Set the application port to 5000.
 Create deployment → Back4App builds the Docker image automatically and generates a public URL.
 
 ---
+
+
+### Production URL
+
+The live deployed version of the project is available at:
+
+https://medicine21-l64ymwst.b4a.run/
+
+---
 ## Updates During Deployment
 During the deployment process, several important updates were made to ensure the system works correctly in a production environment.
 
@@ -126,15 +135,6 @@ Independent of external database services
 ## Adding a Frontend Interface
 
 A simple frontend was added using HTML inside the public folder
-
----
-
-
-### Production URL
-
-The live deployed version of the project is available at:
-
-https://medicine21-l64ymwst.b4a.run/
 
 ---
 ## Project Structure
