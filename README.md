@@ -101,6 +101,43 @@ The live deployed version of the project is available at:
 
 https://medicine21-l64ymwst.b4a.run/
 
+---
+## Updates During Deployment
+During the deployment process, several important updates were made to ensure the system works correctly in a production environment.
+
+## Removing MongoDB Dependency
+
+Originally, the project was using MongoDB Atlas as the main database.
+After deploying the project on Back4App, database connection issues appeared due to network restrictions and environment variable limitations.
+
+To solve this, the backend was redesigned to no longer depend on MongoDB
+
+## Using CSV Files as the Data Source
+
+A new data/ folder was added to the project.
+All system data is now stored in CSV files:
+
+main_medicines.csv
+
+pharmacies.csv
+
+alternative_medicines.csv
+
+The backend was modified to read data directly from these CSV files instead of MongoDB.
+This change made the system:
+
+Fully self-contained
+
+Easier to deploy on any VPS or Docker platform
+
+Independent of external database services
+
+## Adding a Frontend Interface
+
+A simple frontend was added using HTML inside the public folder
+
+---
+
 ## Project Structure
 zmedicine-system/
 │
